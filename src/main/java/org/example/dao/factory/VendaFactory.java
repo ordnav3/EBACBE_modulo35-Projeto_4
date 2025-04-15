@@ -21,7 +21,7 @@ public class VendaFactory {
         venda.setCodigo(rs.getString("CODIGO"));
         venda.setValorTotal(rs.getBigDecimal("VALOR_TOTAL"));
         venda.setDataVenda(rs.getTimestamp("DATA_VENDA").toInstant());
-        venda.setStatus(VendaJpa.Status.getByName(rs.getString("STATUS_VENDA")));
+        venda.setStatus(Venda.Status.getByName(rs.getString("STATUS_VENDA")));
         return venda;
     }
 }
