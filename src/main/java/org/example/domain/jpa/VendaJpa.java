@@ -6,6 +6,7 @@ package org.example.domain.jpa;
 
 import jakarta.persistence.*;
 import org.example.dao.Persistente;
+import org.example.domain.Venda;
 
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -20,7 +21,7 @@ public class VendaJpa implements Persistente {
     public enum Status {
         INICIADA, CONCLUIDA, CANCELADA;
 
-        public static Status getByName(String value) {
+        public static Venda.Status getByName(String value) {
             for (Status status : Status.values()) {
                 if (status.name().equals(value)) {
                     return status;
